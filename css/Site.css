@@ -24,11 +24,11 @@
     position: relative;
     width: 200px;
 
-    -webkit-transform-origin-z: 100px;
-    -moz-transform-origin-z: 100px; 
-    -ms-transform-origin-z: 100px;
-    -o-transform-origin-z: 100px; 
-    transform-origin-z: 100px;
+    -webkit-transform-origin: 50% 50% 100px;
+    -moz-transform-origin: 50% 50% 100px; 
+    -ms-transform-origin: 50% 50% 100px;
+    -o-transform-origin: 50% 50% 100px; 
+    transform-origin: 50% 50% 100px;
 
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
@@ -36,12 +36,11 @@
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
 
-    -webkit-transition: -webkit-transform 0.3s;
-    -moz-transition: -webkit-transform 0.3s;
-    -ms-transition: -webkit-transform 0.3s;
-    -o-transition: -webkit-transform 0.3s;
-
-    transition: -webkit-transform 0.3s;
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    -ms-transition: -ms-transform 0.5s;
+    -o-transition: -o-transform 0.5s;
+    transition: transform 0.5s;
 
     -webkit-transform: translateY(100px);
     -moz-transform: translateY(100px);
@@ -98,7 +97,6 @@
     background-color: blueviolet;
     /*opacity: 0.8;*/
 }
-
 .side.bottom {
     -webkit-transform: translate3d(0,100px,100px) rotateX(-90deg);
     -moz-transform: translate3d(0,100px,100px) rotateX(-90deg);

@@ -1,13 +1,16 @@
-window.onload = function () {
-    document.getElementById("cube").addEventListener("click", rotateCard);
-    document.getElementById("cube").addEventListener("mousewheel", changeDistance);
-}
-
+var cube;
 var angle = 0;
 var distance = 0;
 
+window.onload = function () {
+    cube = document.getElementById("cube");
+
+    cube.addEventListener("click", rotateCard);
+    cube.addEventListener("mousewheel", changeDistance);
+}
+
 var updateCubeTransform = function () {
-    document.getElementById("cube").style.transform = "translate3d(0,100px," + distance + "px) rotateY(" + angle + "deg)";
+    cube.style.transform = "translate3d(0,100px," + distance + "px) rotateY(" + angle + "deg)";
 }
 
 function rotateCard(e) {
