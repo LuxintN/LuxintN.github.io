@@ -35,9 +35,22 @@
 }
 .side.left {
     -webkit-transform: translate3d(100px,0px,100px) rotateY(90deg);
-    background-color: aquamarine;
+    background-color: greenyellow;
+    opacity: 0.8;
 }
 .side.right {
     -webkit-transform: translate3d(-100px,0px,100px) rotateY(-90deg) ; 
     background-color: gold;
+    opacity: 0.8;
+}
+.side.top {
+    -webkit-transform: translate3d(00px,-100px,100px) rotateX(90deg);
+    background-color: blueviolet;
+    opacity: 0.8;
+}
+
+.side.bottom {
+    -webkit-transform: translate3d(00px,100px,100px) rotateX(-90deg);
+    background-color: blue;
+    opacity: 0.8;
 }
