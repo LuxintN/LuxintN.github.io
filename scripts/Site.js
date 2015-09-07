@@ -6,7 +6,8 @@ window.onload = function () {
     cube = document.getElementById("cube");
 
     cube.addEventListener("click", rotateCard);
-    cube.addEventListener("mousewheel", changeDistance);
+    cube.addEventListener("mousewheel", changeDistance); // for Google Chrome
+	cube.addEventListener("DOMMouseScroll", changeDistance); // for Mozilla Firefox
 }
 
 var updateCubeTransform = function () {
@@ -20,10 +21,10 @@ function rotateCard(e) {
 
 function changeDistance(e) {
 
-    if (e.wheelDelta > 0) {
-        distance += 50;
+    if (e.wheelDelta >= 0 || e.detail < 0) {
+		distance += 50;   
     } else {
-        distance -= 50;
+        distance -= 50; 
     }
     
     updateCubeTransform();
